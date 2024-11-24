@@ -27,8 +27,9 @@ const register = async(req,res) =>{
             email,
             password
         })
+        console.log(newUser)
         // Token
-        generateTokenAndCookieSet(ExitsEmail._id,res)
+        generateTokenAndCookieSet(newUser._id,res)
         await newUser.save()
         res.status(201).json({success:true,user:{
             ...newUser._doc,
