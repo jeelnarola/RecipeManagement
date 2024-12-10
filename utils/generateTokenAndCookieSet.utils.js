@@ -9,7 +9,6 @@ const generateTokenAndCookieSet = async(UserId,res)=>{
         httpOnly:true,
         sameSite:"strict"
     })
-    console.log("Token",Token)
     return Token;
     } catch (error) {
         console.log("Error in generateTokenAndCookieSet Utils", error.message)

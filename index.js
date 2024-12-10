@@ -4,9 +4,8 @@ const { DataBaseConnect } = require('./configs/Database')
 const AuthRouter = require('./routers/Auth/auth.routers')
 const RecipesRouter = require('./routers/Recipes/recipes.router')
 const RacipeManage = require('./middlewares/recipeManag')
-require('dotenv').config({path:"../.env"})
+require('dotenv').config()
 const app = express()
-
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 

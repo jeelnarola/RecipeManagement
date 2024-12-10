@@ -27,7 +27,6 @@ const register = async(req,res) =>{
             email,
             password
         })
-        console.log(newUser)
         // Token
         generateTokenAndCookieSet(newUser._id,res)
         await newUser.save()

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
-require('dotenv').config({path:"../.env"})
-console.log(process.env.MONGODB_URL)
+require('dotenv').config()
 const DataBaseConnect = async(req,res)=>{
     try {
         await mongoose.connect(process.env.MONGODB_URL)
